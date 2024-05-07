@@ -1,7 +1,5 @@
 # MealZ App
 
-Brief description of your app.
-
 ## Architecture
 This project follows the principles of Clean Architecture.
 
