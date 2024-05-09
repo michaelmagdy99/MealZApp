@@ -2,5 +2,5 @@ package com.example.domain.entity
 
 
 data class CategoryResponse(
-	val categories: List<CategoriesItem?>? = null
+	var categories: List<CategoriesItem?>? = null
 )

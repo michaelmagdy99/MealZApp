@@ -1,3 +1,4 @@
+
 package com.example.mealz.viewmodel
 
 import android.util.Log
@@ -18,14 +19,15 @@ class MealsViewModel @Inject constructor(
 
     // a2der a3del 3leha
     private val _categories: MutableStateFlow<CategoryResponse?> = MutableStateFlow(null)
+
     // m4 3azheha tt8er
     val category: StateFlow<CategoryResponse?> = _categories
 
     fun getMeals() {
         viewModelScope.launch {
             try {
-                _categories.value = getMealsUseCase()
-            }catch (e :Exception){
+                _categories.value?.categories = getMealsUseCase()
+            } catch (e: Exception) {
                 Log.e("Meal view model", e.message.toString())
             }
         }
